@@ -1,0 +1,7 @@
+sources:
+  - name: demo0-dbt-source-file-name
+    database: demo0
+    schema: demo_schema0
+    tables:
+      - name: bike0
+      - name: weather0
