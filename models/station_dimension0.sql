@@ -12,7 +12,7 @@ WITH BIKE AS (
     start_lng as start_station_lng
 
     FROM 
-    {{ source('demo0-dbt-source-file-name', 'bike0') }}
+    {{ ref('stg_bike0') }}
     where RIDE_ID != 'ride_id'
 )
 

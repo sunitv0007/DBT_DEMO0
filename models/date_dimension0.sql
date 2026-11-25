@@ -11,7 +11,7 @@ WITH CTE AS (
     {{day_type('started_at')}} AS DAY_TYPE,
    {{get_season('started_at')}} AS STATION_OF_YEAR
     FROM 
-    {{ source('demo0-dbt-source-file-name', 'bike0') }}
+    {{ ref('stg_bike0') }}
     WHERE started_at != 'started_at'
 )
 
